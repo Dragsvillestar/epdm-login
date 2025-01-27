@@ -34,8 +34,8 @@ body,html{
     padding-top:50px;
     z-index: 10;
     padding-top: 50px;
-    box-sizing: border-box; 
-    overflow-y: auto;
+    box-sizing: border-box;
+    overflow-y: scroll;
 }
 
 #oilHead, #project-head,.more {
@@ -86,6 +86,7 @@ footer{
     height: 70px;
     background-color: #44537c;
     margin-top: auto;
+    position:relative;
 }
 .mainGrid{
     min-height:100vh;
