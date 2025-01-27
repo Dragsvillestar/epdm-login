@@ -12,6 +12,10 @@ const closeDialog = () => {
     dialog.close();
 }
 
+loginForm.addEventListener("submit", () => {
+    dialog.close();
+});
+
 const signUp = () => {
     dialog.innerHTML = `
         <form id="signUpForm">
@@ -130,3 +134,36 @@ const aboutUs = () => {
         projectDiv.innerHTML = originalContent;
     });
 };
+
+const contactUs = () => {
+    dialog.innerHTML = `
+    <h2>Contact Us</h2>
+    <form action="/submit" method="POST">
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="contactUsName" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="contactUsEmail" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="contactUsMessage" name="message" rows="4" required></textarea>
+      </div>
+      <button class="btn btn-primary" id = "contactUsCancel">Cancel</button>
+      <button type="submit" id = "contactUsSubmit" class="btn btn-primary">Submit</button>
+    </form>
+    `
+    dialog.showModal();
+
+    document.getElementById("contactUsCancel").addEventListener("click", () => {
+        dialog.close();
+        resetModal();
+    });
+
+    document.getElementById("contactUsSubmit").addEventListener("submit", (e) => {
+        dialog.close();
+        resetModal();
+    });
+}

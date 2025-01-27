@@ -70,18 +70,29 @@ li{
 }
 .hj{
     overflow:visible;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+.hj::after {
+    content: "";
+    flex-grow: 1; }
 .sideBarimg{
     max-height: 250px;
     margin: auto
 }
+footer{
+    margin-bottom: -10px;
+    height: 70px;
+    background-color: #44537c;
+    margin-top: auto;
+}
 .mainGrid{
     min-height:100vh;
-    min-height: 100vh;
     overflow: visible; 
 }
 .topBar{
-    background-color:rgb(89, 89, 92);
+    background-color: #44537c;
     margin-top: 0px;
     box-sizing: border-box;
     overflow:hidden;
@@ -96,18 +107,20 @@ li{
 .b-img{
     background-image: url("https://raw.githubusercontent.com/Dragsvillestar/new-git/refs/heads/master/ship.jpg");
     width:100%;
-    background-position: right;
+    background-position: right 100%;
     margin-bottom:0px;
     background-position: fixed;
     background-size: contain;
-    object-fit: cover;
+    background-repeat: no-repeat;
 }
 .project-list{
     margin:10px auto;
     text-align:left;
     padding-left: 50px;
     width:80%;
-    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .projectUl{
     text-align:left;;
@@ -168,17 +181,6 @@ li{
     border: 3px solid rgb(68, 67, 75);
     border-radius: 25% 0% 0% 25%;
 }
-footer {
-    padding:20px;
-    position: relative;
-    bottom:0px;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    height: 70px;
-    margin-bottom: 0;
-    margin-top:30px;
-}
 #figSpan{
     margin-top:-5px;
     margin-bottom: 5px
@@ -190,10 +192,18 @@ a {
     background-color: white;
     border-radius: 10px;
 }
+
+
 @media (min-width: 992px) {
     #loginDialog {
         width:40%
     }
+    .header-container {
+        background: linear-gradient(to right, rgb(224, 224, 228) 20%,
+        rgb(79, 82, 83) 80%, 
+        rgba(0, 10, 205, 0.01) 90% 
+    );
+}
 }
 
  @media (max-width: 992px) {
