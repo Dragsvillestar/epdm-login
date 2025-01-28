@@ -32,7 +32,6 @@ body,html{
     align-items: flex-start;   
     justify-content: flex-start;
     padding-top:50px;
-    z-index: 10;
     padding-top: 50px;
     box-sizing: border-box;
     overflow-y: scroll;
@@ -135,7 +134,7 @@ footer{
 .reg{
     margin-right:90px
 }
-#logo-caption {
+#logocaption {
     background: white;
     width:fit-content;
     font-size: medium;
@@ -171,6 +170,12 @@ footer{
     color: #ffc107;
 }
 
+#headerlogo{
+    display:none;
+    width:100px;
+    height:80px; 
+    border-radius: 20px;
+}
 #searchInput{
     background: transparent;
     border: 3px solid rgb(68, 67, 75);
@@ -214,6 +219,9 @@ a {
     .topBar{
         padding:5px;
         margin-top: 0px;
+    }    
+    #headerlogo{
+        display:block;
     }
  }
  
@@ -223,14 +231,16 @@ a {
         rgb(79, 82, 83) 100%
     );
     }
-    .b-img {
-        background-size: cover; /* Ensures the image scales */
-        background-position: center; /* Centers the image */
-      }
+    #logocaption{
+        margin:5px auto;
+    }
+    .reg{
+        margin:5px auto;
+    }
  }
  @media (min-width : 992px) {
     .moreDiv {
-        width: 50%;
+        width: 70%;
     }
  }
  
@@ -245,7 +255,7 @@ a {
 #usernameSpan, #passwordSpan, #closeLogin, #submitLogin, #closeSignUp, #submitSignUp {
     background-color: rgb(23, 61, 97);;
 }
-#closeLogin, #submitLogin, #loginDialog, #closeSignUp, #submitSignUp{
+#closeLogin, #submitLogin, #loginDialog, #closeSignUp, #submitSignUp, #closeBio, #bioDialog{
     border-radius: 5px;
 }
 
@@ -272,7 +282,27 @@ a {
     transform: scale(1.05);
   }
   
-  .subscribe-icon {
+.subscribe-icon {
     font-size: 22px;
     margin-right: 8px;
   }
+.memberCard img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%;
+}
+.memberCard {
+    max-width: 290px;
+    min-width: 180px
+}
+
+.memberImg {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 50%;
+}
+#bioDialog {
+    max-width: 80%;
+}

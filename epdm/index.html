@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Technical Documentation For Python</title>
+  <title>EPDM LTD</title>
   <link href=
   "https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" 
             rel="stylesheet" />
@@ -22,23 +22,6 @@
                             <figcaption class="mt-2 text-muted"><strong class = "mb-0" style = "font-size : 20px;font-weight: 900;">ENERGY PROJECTS</strong><span id = "figSpan" style = "display:block;font-weight: 600;">DATA MEDIA LTD.</span></figcaption>
                           </figure>  
                           <h6 class="p-2 fw-bold" id = "oilHead">OIL AND GAS PROJECTS BY SECTOR</h6>
-                          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  ...
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Understood</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                         </div>
                         <div class="container-ul mx-auto">
                         <ul class="m-3">
@@ -85,13 +68,18 @@
                       <div class="b-img">
                           <div class="header-container p-3">
                               <div class="logo-area flex-grow-1 text-start">
-                                  <h1>ENERGY PROJECTS DATA MEDIA LTD.</h1>
-                                  <p class="p-2 rounded" id = "logo-caption"><i>your reliable and realtime energy projects market place</i></p>
-                                  <div class="mx-auto d-flex justify-content-center">
+                                <div class="d-flex">                                  
+                                  <img  class = "img-fluid mx-2" id = "headerlogo" src="https://raw.githubusercontent.com/Dragsvillestar/new-git/refs/heads/master/IMG-20250125-WA0011%20(1).jpg" alt="">                            
+                                  <h1>ENERGY PROJECTS DATA MEDIA LTD.</h1>                                  
+                                </div>
+                                  <p class="p-2 rounded mt-2" id = "logocaption"><i>your reliable and realtime energy projects market place</i></p>
+                                  <div class="d-flex justify-content-center">
                                     <h6 class="text-center reg">Registered member? <a class="text-danger" id = "loginLink" onclick="openDialog()">Log in</a>
                                     </h6>      
                                   </div>                                                                  
                                 </div>
+                              <dialog id = "bioDialog">
+                              </dialog>
                               <dialog id="loginDialog">
                                 <h2>LOGIN</h2>
                                 <form id="loginForm">
@@ -122,10 +110,10 @@
                                   <a class="nav-link text-light" onclick= "aboutUs()">ABOUT US</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link text-light" href="#">OUR SERVICES</a>
+                                  <a class="nav-link text-light" href="#" onclick="services()">OUR SERVICES</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link text-light" href="#">OUR TEAM</a>
+                                  <a class="nav-link text-light" id = "teamInfo" onclick="ourTeam()">OUR TEAM</a>
                                 </li>
                                 <li class="nav-item">
                                   <a class="nav-link text-light" href="#">OUR PARTNERS</a>
